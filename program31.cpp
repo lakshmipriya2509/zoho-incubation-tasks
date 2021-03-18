@@ -16,10 +16,10 @@ void swap(string* a, string* b) {
     *b = *a;
 }
 void Shuffle(vector<string>& cards) {
-    auto rng = default_random_engine{};
-    shuffle(begin(cards), end(cards), rng);
+    auto range = default_random_engine{};
+    shuffle(begin(cards), end(cards), range);
 }
-void PrintV(vector<string> cards) {
+void Print(vector<string> cards) {
     int y = 0;
     board();
     for (string x : cards) {
@@ -38,7 +38,7 @@ void PrintV(vector<string> cards) {
     board();
     cout << "\n\n";
 }
-void ResetG(vector<string>& cards) {
+void Reset(vector<string>& cards) {
     for (int y = 1; y < 16; y++) {
         string s = to_string(y);
         cards.push_back(s);
@@ -100,16 +100,16 @@ int main() {
     char move = 'x';
     int moves = 0;
     vector<string>c;
-    ResetG(c);
+    Reset(c);
     Shuffle(c);
     while (!GameOver) {
         cout << "\nmoves : " << moves++ << "\n\n";
-        PrintV(c);
+        Print(c);
         cin >> move;
         logic(c, move, moves);
         GO(c, GameOver);
     }
-    PrintV(c);
+    Print(c);
     cout << "Grate Job!\n Your Finish The Game With Only : " << moves << " : Moves!\n\n";
 
 

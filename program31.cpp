@@ -111,8 +111,5 @@ int main() {
     }
     Print(c);
     cout << "Grate Job!\n Your Finish The Game With Only : " << moves << " : Moves!\n\n";
-
-
-
     return 0;
 }

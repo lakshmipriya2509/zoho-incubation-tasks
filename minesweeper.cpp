@@ -20,7 +20,7 @@ int scorecalc(int x,char rea[][10],char disp[][10]);
 int main()
 {
 	start:
-		system("cls");
+	system("cls");
 	char displayboard[10][10];
 	char realboard[10][10];
 	int xaxis,yaxis;
